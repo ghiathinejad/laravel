@@ -14,3 +14,18 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('hi',function(){
+    return "hi";
+});
+
+/*Route::get('user/{id}',function ($id=null) {
+    return $id;
+});*/
+
+Route::get('sayhi','PageController@index');
+
+
+Route::get('user/{id}','UserController@showUser');
+
+Route::get('welcome','PageController@welcome');
